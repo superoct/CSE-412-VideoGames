@@ -2,3 +2,59 @@ h1
 {
   text-aling: center;
 }
+
+div.tabs
+{
+  margin: auto;
+}
+
+div.tab
+{
+  display: inline-block;
+  border-radius: 5px 5px 0px 0px;
+  margin-top: 5px;
+  padding: 10px;
+  user-select: none;
+  transition: all 200ms ease-in-out;
+}
+
+div.tab.active
+{
+  border-top: 3px solid;
+}
+
+div.tab_content
+{
+  border: solid;
+  border-width: 2px;
+  border-radius: 0px 7px 7px 7px;
+  padding: 10px;
+}
+
+div.tab_content.inactive
+{
+  display: none;
+}
+
+div.tab_content.active
+{
+  display: block;
+}
+
+div.tab_grid_layout
+{
+  display: gird;
+  grid-template-columns: 50% 50%;
+  padding: 20px;
+  min-height: 100px;
+}
+
+div.tab_section
+{
+  margin: 10px;
+  border-radius: 15px;
+  display: grid;
+  min-height: 300px;
+  text-align: center;
+}
+
