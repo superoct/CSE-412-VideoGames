@@ -6,8 +6,122 @@
     <title>CSE 412 Videogames Database</title>
   </head>
   <body>
-    <div class="Title">
+    <div>
       <h1>CSE 412 Videogames</h1>
     </div>
+    <div class="Tabs">
+      <div onclick="switchTabs(this)" class="tab">Home</div>
+      <div onclick="switchTabs(this)" class="tab">Add</div>
+      <div onclick="switchTabs(this)" class="tab">Delete</div>
+      <div onclick="switchTabs(this)" class="tab">Search</div>
+    </div>
+
+    <div class="tab_content_container">
+        <div class="tab_content" id="Home-TabContent">
+            <div class="tab_grid_layout">
+              <div class="tab_section">
+                <p>Hello</p>
+              </div>
+            </div>
+        </div>
+        <div class="tab_content" id="Add-TabContent">
+            <div class="tab_grid_layout">
+              <div class="tab_section">
+                <p>Hello</p>
+              </div>
+            </div>
+        </div>
+        <div class="tab_content" id="Delete-TabContent">
+            <div class="tab_grid_layout">
+              <div class="tab_section">
+                <p>Hello</p>
+              </div>
+            </div>
+        </div>
+        <div class="tab_content" id="Search-TabContent">
+            <div class="tab_grid_layout">
+              <div class="tab_section">
+                <p>Hello</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+      function initialize()
+      {
+      	//the following function sets all tabs to not display only AFTER they have loaded onto the screen
+      	//this allows the display to render properly
+      	var i;
+
+      	//this inactivates all tab content once it has loaded and the width has been properly calcualted by the browser
+      	var tab_contents = document.getElementsByClassName("tab_content");
+      	for (i = 0; i < tab_contents.length; i++)
+      	{
+      		tab_contents[i].classList.add("inactive");
+      	}
+
+      	//this activates the first tab
+      	var tabs = document.getElementsByClassName("tab");
+      	for (i = 0; i < tabs.length; i++)
+      	{
+      		if(i == 0)
+      		{
+      			tabs[i].classList.add("active");
+      			document.getElementById(tabs[i].innerHTML + "-TabContent").classList.add("active");
+      		}
+      	}
+
+      	document.getElementById("logo_darkmode").classList.toggle("hidden"); //hides darkmode logo
+      }
+
+      function switchTabs(element)
+      {
+      	var i;
+
+      	var tab; //will be set, this is the element that is the tab being clicked
+
+      	if(element.classList.contains("tab")) //tab element being referred to is the passed in element
+      	{
+      		tab = element;
+      	}
+      	else if(element.nodeName == "TR") //need to find the tab element that is being referred to
+      	{
+      		var tab_name = element.getElementsByTagName("td")[0].innerHTML; //get tab_name from innerHTML
+      		var tabs = document.getElementsByClassName("tab"); //sort through tabs and find corresponding tab element
+      		for(i=0;i<tabs.length;i++)
+      		{
+      			if(tabs[i].innerHTML == tab_name)
+      			{
+      				tab = tabs[i]; //sets tab element
+      			}
+      		}
+      	}
+
+      	//removes active class from all tabs
+      	var tabs = document.getElementsByClassName("tab");
+      	for(i=0;i<tabs.length;i++)
+      	{
+      		tabs[i].classList.remove("active")
+      		if(tabs[i].innerHTML == tab_name)
+      		{
+      			tab = tabs[i]; //sets tab element
+      		}
+      	}
+
+      	//removes active class from all tab_contents
+      	var tab_contents = document.getElementsByClassName("tab_content");
+      	for (i = 0; i < tab_contents.length; i++)
+      	{
+      		tab_contents[i].classList.remove("active");
+      		tab_contents[i].classList.add("inactive");
+      	}
+
+
+      	tab.classList.add("active"); //activates clicked tab
+      	document.getElementById(tab.innerHTML + "-TabContent").classList.add("active"); //finds and activates associated tab_content
+      }
+      </script>
   </body>
 </html>
