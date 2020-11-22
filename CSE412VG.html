@@ -18,16 +18,30 @@
 
     <div class="tab_content_container">
         <div class="tab_content" id="Home-TabContent">
-            <div class="tab_grid_layout">
+            <div class="tab_grid_layout" style="!important">
               <div class="tab_section">
-                <p>Hello</p>
+                <ul>
+                  <form name="login" action="login.php" method="POST">
+                    <li><input type="submit" name="submitLogin" /></li>
+                  </form>
+                </ul>
               </div>
             </div>
         </div>
         <div class="tab_content" id="Add-TabContent">
             <div class="tab_grid_layout">
               <div class="tab_section">
-                <p>Hello</p>
+                <h2>Enter Information Here</h2>
+                <ul>
+                  <form name="insert" action="insert.php" method="POST">
+                    <li>Video Game ID: <input type="text" name="vgID" /></li>
+                    <li>Video Game Name: <input type="text" name="vgName" /></li>
+                    <li>Video Game Engine: <input type="text" name="vgEngine" /></li>
+                    <li>Video Game Franchise: <input type="text" name="vgFranchise" /></li>
+                    <li>Video Game Description: <input type="text" name="vgDescription" /></li>
+                    <li><input type="submit" name="submitAdd"/></li>
+                  </form>
+                </ul>
               </div>
             </div>
         </div>
@@ -41,7 +55,10 @@
         <div class="tab_content" id="Search-TabContent">
             <div class="tab_grid_layout">
               <div class="tab_section">
-                <p>Hello</p>
+                <ul>
+                  <li>Videogame ID: <input type="text" name="vgIDSearch" /></li>
+                  <li><input type="submit" name="submitSearch" /></li>
+                </ul>
               </div>
             </div>
         </div>
