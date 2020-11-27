@@ -6,8 +6,11 @@
     <title>CSE 412 Videogames Database</title>
   </head>
   <body>
+    <h1>
+        <img scr="C:\Users\User\Documents\FALL2020\CSE412 DATABASE MAN\TeamProjectVideoGameBanner.jpg" alt="VideoGameBanner" width="500" height="300"/>
+    </h1>
     <div>
-      <h1>CSE 412 Videogames</h1>
+      <h1>CSE 412 Videogame Database</h1>
     </div>
     <div class="Tabs">
       <div onclick="switchTabs(this)" class="tab">Home</div>
@@ -18,7 +21,7 @@
 
     <div class="tab_content_container">
         <div class="tab_content" id="Home-TabContent">
-            <div class="tab_grid_layout" style="display: block">
+            <div class="tab_grid_layout" style="!important">
               <div class="tab_section">
                 <ul>
                   <form name="login" action="login.php" method="POST">
@@ -33,7 +36,7 @@
               <div class="tab_section">
                 <h2>Enter Information Here</h2>
                 <ul>
-                  <form name="insert" action="login.php" method="POST">
+                  <form name="insert" action="insert.php" method="POST">
                     <li>Video Game ID: <input type="text" name="vgID" /></li>
                     <li>Video Game Name: <input type="text" name="vgName" /></li>
                     <li>Video Game Engine: <input type="text" name="vgEngine" /></li>
@@ -48,12 +51,7 @@
         <div class="tab_content" id="Delete-TabContent">
             <div class="tab_grid_layout">
               <div class="tab_section">
-                <ul>
-                  <form name="delete" action="login.php" method="POST">
-                    <li>Video Game ID: <input type="text" name="vgIDDelete" /></li>
-                    <li><input type="submit" name="submitDelete" /></li>
-                  </form>
-                </ul>
+                <p>Hello</p>
               </div>
             </div>
         </div>
@@ -61,10 +59,8 @@
             <div class="tab_grid_layout">
               <div class="tab_section">
                 <ul>
-                  <form name="search" action="login.php" method="POST">
-                    <li>Videogame ID: <input type="text" name="vgIDSearch" /></li>
-                    <li><input type="submit" name="submitSearch" /></li>
-                  </form>
+                  <li>Videogame ID: <input type="text" name="vgIDSearch" /></li>
+                  <li><input type="submit" name="submitSearch" /></li>
                 </ul>
               </div>
             </div>
