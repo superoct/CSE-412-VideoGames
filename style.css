@@ -6,6 +6,11 @@ h1
   font-family: Arial;
 }
 
+h2,h4
+{
+  color: dimgrey;
+}
+
 div.tabs
 {
   margin: auto;
