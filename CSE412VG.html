@@ -23,20 +23,20 @@
         <div class="tab_content" id="Home-TabContent">
             <div class="tab_grid_layout" style="!important">
               <div class="tab_section">
-                  <h2 style = "color:dimgrey;">Welcome to the Video Game Database</h2>
-                  <h4 style = "color:dimgrey;">
+                  <h2>Welcome to the Video Game Database</h2>
+                  <h4>
                     There are several different functions here like:
                   </h4>
-                  <h4 style = "color:dimgrey;">
+                  <h4>
                     Add - Enter some information and add a new video game to our databse!
                   </h4>
-                  <h4 style = "color:dimgrey;">
+                  <h4>
                     Delete - Found a mistake? Delete it! Just enter some information.
                   </h4>
-                  <h4 style = "color:dimgrey;">
+                  <h4>
                     Search - Looking for something specific? Enter the ID and BOOM! There you go!
                   </h4>
-                  <h4 style = "color:dimgrey;">
+                  <h4>
                     Below, hit "Submit" to get a list of the current video games in the database
                   </h4>
                 <ul>
@@ -50,9 +50,9 @@
         <div class="tab_content" id="Add-TabContent">
             <div class="tab_grid_layout">
               <div class="tab_section">
-                <h2 style = "color:dimgrey;">Enter Information Here</h2>
+                <h2>Enter Information Here</h2>
                 <ul>
-                  <form name="insert" action="insert.php" method="POST">
+                  <form name="insert" action="login.php" method="POST">
                     <li>Video Game ID: <input type="text" name="vgID" /></li>
                     <li>Video Game Name: <input type="text" name="vgName" /></li>
                     <li>Video Game Engine: <input type="text" name="vgEngine" /></li>
@@ -67,7 +67,12 @@
         <div class="tab_content" id="Delete-TabContent">
             <div class="tab_grid_layout">
               <div class="tab_section">
-                <p>Hello</p>
+                <ul>
+                  <form name="delete" action="login.php" method="POST">
+                    <li>Video Game ID: <input type="text" name="vgIDDelete" /></li>
+                    <li><input type="submit" name="submitDelete" /></li>
+                  </form>
+                </ul>
               </div>
             </div>
         </div>
@@ -75,8 +80,10 @@
             <div class="tab_grid_layout">
               <div class="tab_section">
                 <ul>
-                  <li>Video Game ID: <input type="text" name="vgIDSearch" /></li>
-                  <li><input type="submit" name="submitSearch" /></li>
+                  <form name="search" action="login.php" method="POST">
+                    <li>Video Game ID: <input type="text" name="vgIDSearch" /></li>
+                    <li><input type="submit" name="submitSearch" /></li>
+                  </form>
                 </ul>
               </div>
             </div>
